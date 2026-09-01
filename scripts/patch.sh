@@ -429,7 +429,7 @@ fi
 
 RENDER_CONFIG="$(find "${DECOMPILED}" -name 'RenderAPIConfig.smali' -path '*/tiledmedia/*' -print -quit 2>/dev/null || true)"
 
-if [[ "${F1TV_DIRECT_TO_VIEW:-0}" == "0" ]]; then
+if [[ "${F1TV_DIRECT_TO_VIEW:-0}" == "1" ]]; then
     info "Using the EGL/GL render path for correct 4K colours (set F1TV_DIRECT_TO_VIEW=1 for weak/Amlogic GPUs)"
 elif [[ -n "${RENDER_CONFIG}" && -f "${RENDER_CONFIG}" ]]; then
     info "Patching NRP blit mode to direct-to-view (opt-in, for weak/Amlogic GPUs)..."
