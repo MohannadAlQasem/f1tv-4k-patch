@@ -505,9 +505,9 @@ replacement = """.method private static getDefaultDisplaySize(Landroid/content/C
     # UHD Patch: always report a 3840x2160 panel
     new-instance v0, Landroid/graphics/Point;
 
-    const/16 v1, 0xf00
+    const/16 v1, 0x780
 
-    const/16 v2, 0x870
+    const/16 v2, 0x438
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
