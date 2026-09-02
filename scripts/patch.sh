@@ -300,7 +300,7 @@ fi
 
 info "Searching for DecoderCapability.smali..."
 DECODER_CAP_SMALI="$(find "${DECOMPILED}" -name 'DecoderCapability.smali' -path '*/tiledmedia/*' -print -quit)"
-if [[ -n "${DECODER_CAP_SMALI}" ]]; then
+if [[ -z "${DECODER_CAP_SMALI}" ]]; then
     ok "Found: ${DECODER_CAP_SMALI#${WORKDIR}/}"
     info "Patching ClearVR decoder capability reporting..."
     python3 - "${DECODER_CAP_SMALI}" << 'PYEOF'
